@@ -1,0 +1,24 @@
+{
+  "name": "intellexfront",
+  "description": "Front end of our website",
+  "main": "index.js",
+  "authors": [
+    "Yao <zhao.jerry91@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/Yao-9/IntelliExchangeFrontEnd",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.0",
+    "bootstrap": "^3.3.6",
+    "angular-route": "1.4.x"
+  }
+}

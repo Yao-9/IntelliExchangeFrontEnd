@@ -1,7 +1,7 @@
 {
   "name": "intellexfront",
   "version": "1.0.0",
-  "description": "",
+  "description": "Front end of our website",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,6 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "angular": "^1.5.0"
+    "angular": "^1.5.0",
+    "bootstrap": "^3.3.6",
+    "bower": "^1.7.7"
   }
 }
