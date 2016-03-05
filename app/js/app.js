@@ -4,17 +4,19 @@
 
 var intellExchange = angular.module('intellExchange', [
   'ngRoute',
-  'intellExchangeController'
+  'intellExchangeControllers'
 ]);
 
 intellExchange.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
-      when('/showitem', {
+      when('/allItem', {
         templateUrl: 'partials/item-list.html',
         controller: 'ItemListCtrl'
-      }).
-      when('/', {
+      }).when('/category/:categoryId', {
+        templateUrl: 'partials/item-list.html',
+        controller: 'ItemListCtrl'
+      }).when('/', {
         templateUrl: 'partials/category-list.html',
         controller: 'CategoryListCtrl'
       }).

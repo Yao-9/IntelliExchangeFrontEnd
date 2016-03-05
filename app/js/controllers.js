@@ -1,8 +1,8 @@
-var intellExchangeControllers = angular.module('intellExchangeController', []);
+var intellExchangeControllers = angular.module('intellExchangeControllers', []);
 
-intellExchangeControllers.controller('ItemListCtrl', ['$scope', '$http',
-  function($scope, $http) {
-    $http.get('http://127.0.0.1:8080/item').success(function(data) {
+intellExchangeControllers.controller('ItemListCtrl', ['$scope', '$http', '$routeParams',
+  function($scope, $http, $routeParams) {
+    $http.get('http://127.0.0.1:8080/category/' + $routeParams.categoryId).success(function(data) {
       $scope.items = data;
     });
   }]);
