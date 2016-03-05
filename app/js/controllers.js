@@ -13,3 +13,10 @@ intellExchangeControllers.controller('CategoryListCtrl',['$scope', '$http',
       $scope.categories = data;
     });
   }]);
+
+intellExchangeControllers.controller('ItemDetailCtrl', ['$scope', '$http', '$routeParams',
+  function($scope, $http, $routeParams) {
+    $http.get('http://127.0.0.1:8080/item/' + $routeParams.itemID).success(function(data) {
+      $scope.item = data
+    });
+  }]);

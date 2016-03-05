@@ -19,6 +19,9 @@ intellExchange.config(['$routeProvider',
       }).when('/', {
         templateUrl: 'partials/category-list.html',
         controller: 'CategoryListCtrl'
+      }).when('/item/:itemID', {
+        templateUrl: 'partials/item-detail.html',
+        controller: 'ItemDetailCtrl'
       }).
       otherwise({
         redirectTo: '/'
