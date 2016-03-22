@@ -17,8 +17,7 @@ intellExchange.config(['$routeProvider',
         templateUrl: 'partials/item-list.html',
         controller: 'ItemListCtrl'
       }).when('/', {
-        templateUrl: 'partials/category-list.html',
-        controller: 'CategoryListCtrl'
+        templateUrl: 'partials/index.html'
       }).when('/item/:itemID', {
         templateUrl: 'partials/item-detail.html',
         controller: 'ItemDetailCtrl'

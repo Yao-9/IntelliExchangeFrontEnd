@@ -1,0 +1,25 @@
+<div class="container-fluid jumbotron" style="height: 500px; padding: 10px 0px 0px 0px;">
+  <div class="container-fluid" stype="background-color: #FF0;">
+    <nav class="navbar navbar-default">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">WebSiteName</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Page 1</a></li>
+        <li><a href="#">Page 2</a></li>
+        <li><a href="#">Page 3</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<h2>当前流行主题</h2>
+
+<div class="container" ng-controller="PopCategoryCtrl">
+  <div class="PopCategorys">
+    <span class="PopCategory" ng-repeat="pop in popcates">
+        <a href="#/category/{{category.name}}">{{pop.name}}</a>
+    </span>
+  </div>
+</div>

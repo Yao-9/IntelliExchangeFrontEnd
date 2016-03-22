@@ -20,3 +20,10 @@ intellExchangeControllers.controller('ItemDetailCtrl', ['$scope', '$http', '$rou
       $scope.item = data
     });
   }]);
+
+intellExchangeControllers.controller('PopCategoryCtrl', ['$scope', '$http',
+  function($scope, $http) {
+    $http.get('http://127.0.0.1:8080/popularcategory').success(function(data) {
+      $scope.popcates = data;
+    });
+  }]);
