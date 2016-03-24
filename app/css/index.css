@@ -8,7 +8,21 @@ h2 {
   margin-top: 30px;
 }
 
-
 .PopCategory {
   margin: 30px;
+}
+
+#skillCategory {
+  padding: 0px 10% 0px 10%;
+}
+
+.col-md-3 {
+  /*background:orange;*/
+  display: block;
+  margin: 0 auto;
+}
+
+img.center {
+  display: block;
+  margin: 0 auto;
 }
