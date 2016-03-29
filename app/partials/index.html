@@ -1,32 +1,20 @@
 <div class="container-fluid jumbotron" style="height: 500px; padding: 10px 0px 0px 0px;">
-  <div class="container-fluid" stype="background-color: #FF0;">
-    <nav class="navbar navbar-default">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="#">WebSiteName</a>
-      </div>
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">Page 1</a></li>
-        <li><a href="#">Page 2</a></li>
-        <li><a href="#">Page 3</a></li>
-      </ul>
-    </nav>
-  </div>
+  <div ng-include="'partials/navbar.html'"></div>
 </div>
 
-<h2>当前流行主题</h2>
+<h2 class="index_center_h2">当前流行主题</h2>
 <div class="container" ng-controller="PopCategoryCtrl">
-  <div class="PopCategorys">
-    <span class="PopCategory" ng-repeat="pop in popcates | orderBy:'-popularity'">
+  <div class="index_pop_categories">
+    <span class="index_pop_category" ng-repeat="pop in popcates | orderBy:'-popularity'">
         <a href="#/category/{{category.engName}}">{{pop.name}}</a>
     </span>
   </div>
 </div>
 
-<h2>流行课程</h2>
-<div class="container" id="popCourse" ng-controller="PopCourseCtrl">
-  <span ng-repeat="item in popCourse | orderBy:'-popularity'">
-    <img class="center" src="{{item.imageURL}}" alt="{{item.name}}" />
-    <a href="#/item/{{item.id}}">{{item.description}}</div>
+<h2 class="index_center_h2">流行课程</h2>
+<div class="container" id="index_pop_course" ng-controller="PopCourseCtrl">
+  <span class="col-md-3 index_col-md-" ng-repeat="item in popCourse">
+    <img class="index_pop_course_thumbnail" src="{{item.imageURL}}" alt="{{item.name}}" />
+    <div class="index_pop_course_name"><a href="#/item/{{item.id}}">{{item.name}}</div>
   </span>
 </div>

@@ -34,3 +34,11 @@ intellExchangeControllers.controller('PopCourseCtrl', ['$scope', '$http',
       $scope.popCourse = data;
     });
   }]);
+
+intellExchangeControllers.controller('QueryPageCtrl', ['$scope', '$http',
+  function($scope, $http) {
+    $scope.sendQuery = function(query) {
+      $scope.items = $http.get('http://127.0.0.1:8080/query/' + query).success(function(data) {
+      });
+    }
+  }]);

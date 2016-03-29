@@ -21,8 +21,10 @@ intellExchange.config(['$routeProvider',
       }).when('/item/:itemID', {
         templateUrl: 'partials/item-detail.html',
         controller: 'ItemDetailCtrl'
-      }).
-      otherwise({
+      }).when('/query/:queryword', {
+        templateUrl:'partials/search_result.html',
+        controller: 'QueryPageCtrl'
+      }).otherwise({
         redirectTo: '/'
       });
 }]);
